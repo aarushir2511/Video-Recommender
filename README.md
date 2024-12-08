@@ -28,6 +28,18 @@ It uses metrics like **Mean Absolute Error (MAE)** and **Root Mean Square Error 
 
 ---
 
-## Project Structure
-├── data/ │ ├── unified_interactions.csv # User-post interactions dataset │ ├── final_all_posts_df.csv # Posts metadata and similarity scores ├── recommenders/ │ ├── content_based.py # Content-based recommendation logic │ ├── collaborative.py # Collaborative filtering logic │ ├── hybrid.py # Hybrid recommendation logic ├── evaluation/ │ ├── metrics.py # Evaluation metrics logic │ ├── evaluate.py # Scripts for model evaluation ├── README.md # Project documentation └── main.py # Main script for execution
+## Dataset
+- **Unified Interactions**: Contains `user_id`, `post_id`, `viewed_at`, `liked_at`, `inspired_at` and `rating_percent`.
+- **Posts Metadata**: Contains `post_id` and attributes for calculating similarity scores.
+
+---
+
+## Installation
+
+### Prerequisites
+1. Python 3.8+
+2. Required Python libraries:
+   ```bash
+   pip install pandas numpy scikit-learn
+
 
