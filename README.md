@@ -29,4 +29,5 @@ It uses metrics like **Mean Absolute Error (MAE)** and **Root Mean Square Error 
 ---
 
 ## Project Structure
+├── data/ │ ├── unified_interactions.csv # User-post interactions dataset │ ├── final_all_posts_df.csv # Posts metadata and similarity scores ├── recommenders/ │ ├── content_based.py # Content-based recommendation logic │ ├── collaborative.py # Collaborative filtering logic │ ├── hybrid.py # Hybrid recommendation logic ├── evaluation/ │ ├── metrics.py # Evaluation metrics logic │ ├── evaluate.py # Scripts for model evaluation ├── README.md # Project documentation └── main.py # Main script for execution
 
