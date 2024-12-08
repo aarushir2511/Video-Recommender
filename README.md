@@ -43,3 +43,57 @@ It uses metrics like **Mean Absolute Error (MAE)** and **Root Mean Square Error 
    pip install pandas numpy scikit-learn
 
 
+##Usage
+Step 1: Prepare Data
+
+Place unified_interactions.csv and final_all_posts_df.csv in the data/ directory.
+
+Step 2: Run the Script
+
+Execute the main script to calculate evaluation metrics:
+
+Bash
+python main.py
+Use code with caution.
+
+Example Output
+
+Content-Based MAE: 0.24, RMSE: 0.31
+Collaborative Filtering MAE: 0.30, RMSE: 0.37
+Hybrid MAE: 0.22, RMSE: 0.29
+Code Highlights
+Evaluation Logic
+
+The calculate_metrics function evaluates each recommendation model:
+
+Python
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+
+def calculate_metrics(actual_ratings, predicted_ratings):
+    mae = mean_absolute_error(actual_ratings, predicted_ratings)
+    rmse = np.sqrt(mean_squared_error(actual_ratings, predicted_ratings))
+    return mae, rmse
+Use code with caution.
+
+Robust Error Handling
+
+Ensures no crashes due to empty or inconsistent data:
+
+Python
+if actual_ratings.empty or predicted_ratings.empty:
+    return np.nan, np.nan
+Use code with caution.
+
+Future Improvements
+Personalize collaborative filtering using implicit feedback.
+Add time-based recommendation features.
+Visualize evaluation metrics with detailed plots.
+Contributing
+Contributions are welcome! Fork this repository and submit a pull request with your changes.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.   
+
+Contact
+Author: Aarushi Ranjan
+Email: your_email@example.com
