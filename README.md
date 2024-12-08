@@ -43,7 +43,7 @@ It uses metrics like **Mean Absolute Error (MAE)** and **Root Mean Square Error 
    pip install pandas numpy scikit-learn
 
 
-##Usage
+## Usage
 Step 1: Prepare Data
 
 Place unified_interactions.csv and final_all_posts_df.csv in the data/ directory.
